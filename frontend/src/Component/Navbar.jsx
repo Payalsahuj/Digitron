@@ -1,17 +1,22 @@
 import { useState } from "react"
 import logo from "../Image/2-removebg-preview.png"
+import { useNavigate } from "react-router-dom"
 
 
 export function Navbar(){
     const [state,setstate]=useState(false)
+    const navigate=useNavigate()
     const [mobilestate,setmobilestate]=useState(false)
+    function handlehome(){
+        navigate("/dashboard")
+    }
     return <div class="min-h-full">
     <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <img class="h-12 w-18" src={logo} alt="Your Company"/>
+            <div class="flex-shrink-0 hover:cursor-pointer"  onClick={handlehome}>
+              <img class="h-12 w-18" src={logo} alt="Your Company" />
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">

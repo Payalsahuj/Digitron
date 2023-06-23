@@ -139,7 +139,7 @@ export function Registration() {
             <Box data-aos="fade-left" position='relative' top='-100px' borderRadius={'10px'} left={'14%'} backgroundColor='#eef4fae6' width={'70%'} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
                 <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                     <Image src={cap} width={{ base: '10%', md: '7%' }} m={'15px'} alt='' />
-                    <a style={{ marginTop: '23px' }} href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=1000&color=212121&repeat=false&width=445&lines=Register+to+Digitron." alt="Typing SVG" /></a>
+                    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=1000&color=212121&repeat=false&width=445&lines=Register+to+Digitron." alt="Typing SVG" style={{marginTop:'2%'}} />
                 </Box>
                 <Box width={'90%'} m='auto'>
                     <Flex
