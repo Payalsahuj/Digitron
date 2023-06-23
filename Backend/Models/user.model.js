@@ -8,6 +8,7 @@ const userSchema=mongoose.Schema({
     Name:String,
     password:String,
     role:String,
+    course:String,
     verify:Boolean
 })
 

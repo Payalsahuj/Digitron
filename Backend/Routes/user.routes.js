@@ -12,7 +12,7 @@ const { UserOTP } = require('../Models/otp.model');
 
 
 userRoute.post("/register",async(req,res)=>{
-    const {Phone_No,email,password,Name , city }=req.body;
+    const {Phone_No,email,password,Name , course }=req.body;
     const user=await UserModel.find({email});
    
     //console.log(Phone_No)
@@ -24,7 +24,7 @@ userRoute.post("/register",async(req,res)=>{
                 if(err){
                     throw err
                 }
-                let userp=await new UserModel({Name,email,password:hash,Phone_No,city , role:"user" , verify:false});
+                let userp=await new UserModel({Name,email,password:hash,Phone_No,course , role:"user" , verify:false});
                  userp.save();
             });
             let OTP= otpGenerator.generate(6, { upperCaseAlphabets: true, specialChars: true }); //otp generation;
@@ -174,7 +174,7 @@ function sendOTPforverification(email,otp){
     .sendMail({
        from:"lawlink.legal.services@gmail.com",
        to:email,
-       subject:"Here is your OTP for DigiTron🤖 Login",
+       subject:"Here is your OTP for DigiTron Login",
        html:`<!DOCTYPE html>
        <html>
          <head>
@@ -186,15 +186,15 @@ function sendOTPforverification(email,otp){
            <table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #fff; border-collapse: collapse;">
              <tr>
                <td style="background-color: #0077c0; text-align: center; padding: 10px;">
-                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron🤖</h1>
+                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron</h1>
                </td>
              </tr>
              <tr>
                <td style="padding: 20px;">
-                 <h2 style="font-size: 24px; color: #0077c0; margin-top: 0;">OTP for DigiTron🤖 Login : ${otp}</h2>
-                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron🤖</p>
+                 <h2 style="font-size: 24px; color: #0077c0; margin-top: 0;">OTP for DigiTron Login : ${otp}</h2>
+                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron</p>
                  <p style="margin-bottom: 0;">Best regards,</p>
-                 <p style="margin-bottom: 20px;">DigiTron🤖</p>
+                 <p style="margin-bottom: 20px;">DigiTron</p>
                  <p style="margin-bottom: 20px;">Let's change our tommorrow...</p>
                </td>
              </tr>
@@ -229,15 +229,15 @@ function sendemailrestlink(email,link){
            <table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #fff; border-collapse: collapse;">
              <tr>
                <td style="background-color: #0077c0; text-align: center; padding: 10px;">
-                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron🤖</h1>
+                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron</h1>
                </td>
              </tr>
              <tr>
                <td style="padding: 20px;">
                  <h2 style="font-size: 24px; color: #0077c0; margin-top: 0;">Link for resetting your password <a href=${link}> link</a></h2>
-                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron🤖</p>
+                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron</p>
                  <p style="margin-bottom: 0;">Best regards,</p>
-                 <p style="margin-bottom: 20px;">DigiTron🤖</p>
+                 <p style="margin-bottom: 20px;">DigiTron</p>
                  <p style="margin-bottom: 20px;">Let's change our tommorrow...</p>
                </td>
              </tr>
