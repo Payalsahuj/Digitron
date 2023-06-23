@@ -18,5 +18,4 @@ export function Allroutes() {
       <Route path="/qa" element={<QandA />}></Route>
 
     </Routes>
-  );
 }
