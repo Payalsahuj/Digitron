@@ -1,4 +1,5 @@
 import { Navbar } from "../Component/Navbar";
+
 import video from "../Image/dashvedio.mp4"
 import dashbot from "../Image/dashbot.png"
 import DataDisplay from "../Component/Slidedata";
@@ -70,5 +71,7 @@ export function Dashboard(){
     </div>
     <Footer/>
         </div>
-    )
+      </header>
+    </div>
+  )
 }

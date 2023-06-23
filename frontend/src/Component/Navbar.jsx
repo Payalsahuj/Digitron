@@ -1,6 +1,3 @@
-import { useState } from "react"
-import logo from "../Image/2-removebg-preview.png"
-import { useNavigate } from "react-router-dom"
 
 
 export function Navbar(){
@@ -121,3 +118,4 @@ export function Navbar(){
     </main>
   </div>
 }
+
