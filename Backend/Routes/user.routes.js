@@ -174,9 +174,33 @@ function sendOTPforverification(email,otp){
     .sendMail({
        from:"lawlink.legal.services@gmail.com",
        to:email,
-       subject:"Verify your Email for registraion on LawLink",
-       text:"hey it's",
-       html:`<h1>OTP for email verification:${otp}</h1>`
+       subject:"Here is your OTP for DigiTron🤖 Login",
+       html:`<!DOCTYPE html>
+       <html>
+         <head>
+           <title>Example Email Template</title>
+           <meta charset="utf-8" />
+           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         </head>
+         <body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; color: #333; padding: 20px;">
+           <table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #fff; border-collapse: collapse;">
+             <tr>
+               <td style="background-color: #0077c0; text-align: center; padding: 10px;">
+                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron🤖</h1>
+               </td>
+             </tr>
+             <tr>
+               <td style="padding: 20px;">
+                 <h2 style="font-size: 24px; color: #0077c0; margin-top: 0;">OTP for DigiTron🤖 Login : ${otp}</h2>
+                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron🤖</p>
+                 <p style="margin-bottom: 0;">Best regards,</p>
+                 <p style="margin-bottom: 20px;">DigiTron🤖</p>
+                 <p style="margin-bottom: 20px;">Let's change our tommorrow...</p>
+               </td>
+             </tr>
+           </table>
+         </body>
+       </html>`
     })
     .then(()=>{
        console.log("mail sent succesfully")
@@ -192,9 +216,34 @@ function sendemailrestlink(email,link){
     .sendMail({
        from:"lawlink.legal.services@gmail.com",
        to:email,
-       subject:"link to reset your password",
-       //text:"hey it's",
-       html:`<p>Link for resetting your password <a href=${link}> link</a></p>`
+       subject:"Here is your link to reset your password",
+       html:
+       `<!DOCTYPE html>
+       <html>
+         <head>
+           <title>Example Email Template</title>
+           <meta charset="utf-8" />
+           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         </head>
+         <body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; color: #333; padding: 20px;">
+           <table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #fff; border-collapse: collapse;">
+             <tr>
+               <td style="background-color: #0077c0; text-align: center; padding: 10px;">
+                 <h1 style="font-size: 28px; color: #fff; margin: 0;">DigiTron🤖</h1>
+               </td>
+             </tr>
+             <tr>
+               <td style="padding: 20px;">
+                 <h2 style="font-size: 24px; color: #0077c0; margin-top: 0;">Link for resetting your password <a href=${link}> link</a></h2>
+                 <p style="margin-bottom: 20px;">Thank you for choosing DigiTron🤖</p>
+                 <p style="margin-bottom: 0;">Best regards,</p>
+                 <p style="margin-bottom: 20px;">DigiTron🤖</p>
+                 <p style="margin-bottom: 20px;">Let's change our tommorrow...</p>
+               </td>
+             </tr>
+           </table>
+         </body>
+       </html>`
     })
     .then(()=>{
        console.log("mail sent succesfully")
