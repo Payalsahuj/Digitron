@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const { userRoute } = require("./Routes/user.routes");
 
 const app = express();
-const port = 3000;
+
 
 require("dotenv").config();
 
@@ -13,7 +13,7 @@ require("dotenv").config();
 
 
 
-const app = express();
+
 
 
 
@@ -28,10 +28,6 @@ app.use(express.json());
 
 
 
-
-app.use("/user",userRoute)
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
 
 
 
