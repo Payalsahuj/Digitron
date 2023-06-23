@@ -1,55 +1,41 @@
-const express = require('express');
-const openai = require('openai');
+const express = require("express")
 
-const app = express();
-const apiKey = process.env.OPENAI_API_KEY;
-openai.api_key = apiKey;
+const { Configuration, OpenAIApi } = require("openai");
+require('dotenv').config();
 
-// Serve static files in a public directory
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const app = express()
+app.use(express.json())
 
-// Render the interview form
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/interview.html');
+const configuration = new Configuration({
+  apiKey: process.env.API_KEY,
 });
 
-// Handle form submission
-app.post('/submit', async (req, res) => {
-  const question = req.body.question;
-  const answer = req.body.answer;
+const openai = new OpenAIApi(configuration);
 
-  const prompt = `
-    You are providing feedback on the interview response of a candidate.
-    ---
-    Interview Question: ${question}
-    Candidate's Response: ${answer}
-    ---
-    Feedback:
-  `;
-
-  const parameters = {
-    engine: 'davinci',
-    prompt: prompt,
+//=> Route for General chat bot
+app.post("/generalChat", async(req, res)=>{
+  const message = req.body.msg
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: `${message}.`,
     max_tokens: 100,
-    temperature: 0.5,
-    n: 1,
-    stop: '\n'
-  };
+    temperature: 0,
+  })
+  res.send(response.data.choices[0].text)
+})
 
-  try {
-    const { choices } = await openai.completions.create(parameters);
-    const feedback = choices[0].text.trim();
-    res.send(feedback);
-  } catch (error) {
-    console.log('Error analyzing interview response:', error);
-    res.status(500).send('Unable to generate feedback at the moment. Please try again later.');
-  }
-});
+//=> Route for Interview chat bot
+app.post("/interviewChat", async(req, res)=>{
+  const message = req.body.msg
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: `Pretend like you are an interviewer name Batman and you are taking interview for the role of web developer, ask conceptual questions about react not about experience as if you are receiving answers from a interviewee. interviewee: ${message}.`,
+    max_tokens: 100,
+    temperature: 0,
+  })
+  res.send(response.data.choices[0].text)
+})
 
-// Start the server
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+app.listen(3000, ()=>{
+  console.log("Server is running")
+})
