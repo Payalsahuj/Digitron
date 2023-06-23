@@ -28,6 +28,9 @@ const IconDisplay = () => {
       }
     }, 1000);
 
+
+    
+
     return () => {
       clearInterval(interval);
     };
