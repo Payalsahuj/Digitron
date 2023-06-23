@@ -27,7 +27,7 @@ import { POST_REGISTER_ERROR, POST_REGISTER_SUCCESS } from "../Redux/AuthReducer
 
 
 export function Registration() {
-
+  
     const [firstname, setfirstname] = useState("")
     const [isErrorname, setisErrorname] = useState(false)
 
@@ -46,7 +46,7 @@ export function Registration() {
     const [isErrornation, setisErrornation] = useState(false)
 
     const toast = useToast()
-    const navigate = useNavigate()
+    const navigate=useNavigate()
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -87,7 +87,7 @@ export function Registration() {
                 toast({
                     position: 'top-right',
                     title: 'Account has been Added',
-                    description: "Please Login now !!",
+                    description: "Please Login now !!",   
                     status: 'success',
                     duration: 4000,
                     isClosable: true,
@@ -132,7 +132,7 @@ export function Registration() {
     return (<Box >
         {/* {isLoading?<LoadingBlack/>: */}
         <Box>
-
+        
         <Box
             height={'250px'} backgroundColor={'black'}></Box>
         <Box >
@@ -244,17 +244,20 @@ export function Registration() {
                                         <Text align={'center'}>
                                             Already a user? <Reactlink to="/login" ><span style={{ color: '#4299E1' }}>Login</span></Reactlink>
                                         </Text>
-
                                     </Stack>
-                                </Box>
-                            </Stack>
-                        </Flex>
-                    </Box>
+                                </Stack>
+                            </Box>
+                        </Stack>
+                    </Flex>
                 </Box>
-            </Box></Box>
+            </Box>
+        </Box></Box>
         {/* } */}
 
     </Box>)
 }
+
+
+
 
 
