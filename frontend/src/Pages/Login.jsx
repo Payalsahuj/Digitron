@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 // import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { Link as Reactlink, useNavigate } from 'react-router-dom';
+import {  Link as Reactlink, useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../Redux/AuthReducer/action";
@@ -31,8 +31,8 @@ import { POST_LOGIN_SUCCESS, POST_REGISTER_ERROR } from "../Redux/AuthReducer/ac
 
 
 
-export function Login() {
-
+export function Login(){
+  
     const [email, setemail] = useState("")
     const [isErroremail, setisErroremail] = useState(false)
 
@@ -41,23 +41,23 @@ export function Login() {
     const toast = useToast()
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
-    useEffect(() => {
+   const navigate=useNavigate()
+    useEffect(()=>{
         AOS.init({ duration: 1000 });
-    }, [])
+    },[])
 
 
 
     function handleclick() {
 
-
+       
         if (email === "") {
             setisErroremail(true)
         }
         else if (pass === "") {
             setisErrorpass(true)
         }
-
+        
         else {
 
             let obj = {
@@ -78,13 +78,13 @@ export function Login() {
                     isClosable: true,
 
                 })
-                localStorage.setItem("token", res.data.token)
-
+                localStorage.setItem("token",res.data.token)
+                
                 setemail("")
                 setpass("")
                 navigate("/")
-
-
+                
+                
             })
                 .catch((err) => {
                     console.log(err)
@@ -101,7 +101,7 @@ export function Login() {
                         })
                     }
                     else if (err.response.data.msg === "Invalid email !!") {
-
+                        
                         setisErrorpass(false)
                         setisErroremail(true)
 
@@ -115,14 +115,14 @@ export function Login() {
                         })
 
                     }
-                    dispatch({ type: POST_REGISTER_ERROR })
+                    dispatch({ type: POST_REGISTER_ERROR})
                 })
 
         }
     }
 
 
-    return (<Box >
+    return(<Box >
         {/* {isLoading?<LoadingBlack/>: */}
         <Box>
         
@@ -200,14 +200,14 @@ export function Login() {
                                         <Text align={'center'}>
                                             Is your account is <Reactlink to="/register" ><span style={{color:'#4299E1'}}>Registered?</span></Reactlink>
                                         </Text>
-
                                     </Stack>
-                                </Box>
-                            </Stack>
-                        </Flex>
-                    </Box>
+                                </Stack>
+                            </Box>
+                        </Stack>
+                    </Flex>
                 </Box>
-            </Box></Box>
+            </Box>
+        </Box></Box>
         {/* } */}
     </Box>)
 }
