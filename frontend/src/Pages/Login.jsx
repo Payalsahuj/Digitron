@@ -125,82 +125,82 @@ export function Login() {
     return (<Box >
         {/* {isLoading?<LoadingBlack/>: */}
         <Box>
+        
+        <Box
+            height={'250px'} backgroundColor={'black'}></Box>
+        <Box >
+            <Box data-aos="fade-left" position='relative' top='-100px' borderRadius={'10px'} left={'14%'} backgroundColor='#eef4fae6' width={'70%'} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
+                <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                    <Image src={cap} width={{base:'10%',md:'7%'}} m={'15px'} alt='' />
+                    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=1000&color=212121&repeat=false&width=445&lines=Login+to+Digitron." alt="Typing SVG" style={{marginTop:'2%'}} />
+                </Box>
+                <Box  width={'90%'} m='auto'>
+                    <Flex
+                       
+                        align={'center'}
+                        justify={'center'}
+                        pb='30px'
+                    //   bg={useColorModeValue('gray.50', 'gray.800')}
+                    >
+                        
+                        <Stack width={'100%'} >
+                            
+                            <Box
+                                 
+                                //   bg={useColorModeValue('white', 'gray.700')}
+                                // boxShadow={'lg'}
+                                p={8}>
+                                <Stack data-aos="fade-left" spacing={9}>
+                                   
+                                    <Flex width={'100%'}  direction={'column'} justifyContent={'space-between'} >
+                                        <Box width={{base:'100%',md:'75%'}} margin={'auto'}>
+                                        <FormControl id="email" isInvalid={isErroremail} isRequired>
+                                                <FormLabel>Email</FormLabel>
+                                                <Input backgroundColor={'#c1d6f3'} type="email" value={email} onChange={(e) => setemail(e.target.value)} />
+                                                {!isErroremail ? (
+                                                    <FormHelperText>
+                                                        Enter the email you'd like to receive payment details.
+                                                    </FormHelperText>
+                                                ) : (
+                                                    <FormErrorMessage>Email is required.</FormErrorMessage>
+                                                )}
+                                            </FormControl>
+                                        </Box>
+                                        <Box width={{base:'100%',md:'65%'}} pt={'20px'}  margin={'auto'}>
+                                        <FormControl id="password" isInvalid={isErrorpass} isRequired>
+                                                <FormLabel>Password</FormLabel>
+                                                <Input backgroundColor={'#c1d6f3'} type="password" value={pass} onChange={(e) => setpass(e.target.value)} />
+                                                {!isErrorpass ? (
+                                                    <FormHelperText>
+                                                        Password should contain atleast one number, one special character, and of atleast 8 characters long.
+                                                    </FormHelperText>
+                                                ) : (
+                                                    <FormErrorMessage>Password should contain atleast one number, one special character, and of atleast 8 characters long.</FormErrorMessage>
+                                                )}
+                                            </FormControl>
+                                        </Box>
+                                        
+                                    </Flex>
+                                    
+                                    <Stack  spacing={10} pt={2}>
+                                        <Button
+                                        width={{base:'100%',md:'50%'}}
+                                        margin={'auto'}
+                                           onClick={handleclick}
+                                            size="lg"
+                                            bg={'#263238'}
+                                            color={'white'}
+                                            _hover={{
+                                                bg: 'blue.500',
+                                            }}>
+                                            Login
+                                        </Button>
+                                    </Stack>
+                                    <Stack pt={6}>
+                                        <Text align={'center'}>
+                                            Is your account is <Reactlink to="/register" ><span style={{color:'#4299E1'}}>Registered?</span></Reactlink>
+                                        </Text>
 
-            <Box
-                height={'250px'} backgroundColor={'black'}></Box>
-            <Box >
-                <Box data-aos="fade-left" position='relative' top='-100px' borderRadius={'10px'} left={'14%'} backgroundColor='#eef4fae6' width={'70%'} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
-                    <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <Image src={cap} width={{ base: '10%', md: '7%' }} m={'15px'} alt='' />
-                        <a style={{ marginTop: '23px' }} href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=1000&color=212121&repeat=false&width=445&lines=Login+to+Digitron." alt="Typing SVG" /></a>
-                    </Box>
-                    <Box width={'90%'} m='auto'>
-                        <Flex
-
-                            align={'center'}
-                            justify={'center'}
-                            pb='30px'
-                        //   bg={useColorModeValue('gray.50', 'gray.800')}
-                        >
-
-                            <Stack width={'100%'} >
-
-                                <Box
-
-                                    //   bg={useColorModeValue('white', 'gray.700')}
-                                    // boxShadow={'lg'}
-                                    p={8}>
-                                    <Stack data-aos="fade-left" spacing={9}>
-
-                                        <Flex width={'100%'} direction={'column'} justifyContent={'space-between'} >
-                                            <Box width={{ base: '100%', md: '75%' }} margin={'auto'}>
-                                                <FormControl id="email" isInvalid={isErroremail} isRequired>
-                                                    <FormLabel>Email</FormLabel>
-                                                    <Input backgroundColor={'#c1d6f3'} type="email" value={email} onChange={(e) => setemail(e.target.value)} />
-                                                    {!isErroremail ? (
-                                                        <FormHelperText>
-                                                            Enter the email you'd like to receive payment details.
-                                                        </FormHelperText>
-                                                    ) : (
-                                                        <FormErrorMessage>Email is required.</FormErrorMessage>
-                                                    )}
-                                                </FormControl>
-                                            </Box>
-                                            <Box width={{ base: '100%', md: '65%' }} pt={'20px'} margin={'auto'}>
-                                                <FormControl id="password" isInvalid={isErrorpass} isRequired>
-                                                    <FormLabel>Password</FormLabel>
-                                                    <Input backgroundColor={'#c1d6f3'} type="password" value={pass} onChange={(e) => setpass(e.target.value)} />
-                                                    {!isErrorpass ? (
-                                                        <FormHelperText>
-                                                            Password should contain atleast one number, one special character, and of atleast 8 characters long.
-                                                        </FormHelperText>
-                                                    ) : (
-                                                        <FormErrorMessage>Password should contain atleast one number, one special character, and of atleast 8 characters long.</FormErrorMessage>
-                                                    )}
-                                                </FormControl>
-                                            </Box>
-
-                                        </Flex>
-
-                                        <Stack spacing={10} pt={2}>
-                                            <Button
-                                                width={{ base: '100%', md: '50%' }}
-                                                margin={'auto'}
-                                                onClick={handleclick}
-                                                size="lg"
-                                                bg={'#263238'}
-                                                color={'white'}
-                                                _hover={{
-                                                    bg: 'blue.500',
-                                                }}>
-                                                Login
-                                            </Button>
-                                        </Stack>
-                                        <Stack pt={6}>
-                                            <Text align={'center'}>
-                                                Is your account is <Reactlink to="/register" ><span style={{ color: '#4299E1' }}>Registered?</span></Reactlink>
-                                            </Text>
-                                        </Stack>
                                     </Stack>
                                 </Box>
                             </Stack>
