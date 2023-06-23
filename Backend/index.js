@@ -1,14 +1,26 @@
+const { config } = require('dotenv');
 const express = require('express');
 const openai = require('openai');
+require("dotenv").config();
+
+
+
+
 
 const app = express();
 const apiKey = process.env.OPENAI_API_KEY;
 openai.api_key = apiKey;
 
+
+
+
 // Serve static files in a public directory
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
+
 
 // Render the interview form
 app.get('/', (req, res) => {
@@ -48,8 +60,27 @@ app.post('/submit', async (req, res) => {
   }
 });
 
+
+
+
+
+
 // Start the server
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(process.env.port, () => {
+  console.log("**************Connected to DB***************");
 });
+
+
+
+
+
+
+
+
+// ****************************************************************************************
+
+// mongoURL= mongodb+srv://krunalgurao:krunalgurao@digitron.zojf4xp.mongodb.net/Digitron?retryWrites=true&w=majority
+// port = 0619
+
+
+// *********************************************************************************************
