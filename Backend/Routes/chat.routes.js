@@ -11,7 +11,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 //=> Route for General chat bot
-chatRoute.post("/generalChat", async(req, res)=>{
+chatRoute.post("/generalChat", async (req, res) => {
   const message = req.body.msg
   const response = await openai.createCompletion({
     model: "text-davinci-003",
@@ -23,7 +23,7 @@ chatRoute.post("/generalChat", async(req, res)=>{
 })
 
 //=> Route for Interview chat bot
-chatRoute.post("/interviewChat", async(req, res)=>{
+chatRoute.post("/interviewChat", async (req, res) => {
   const message = req.body.msg
   const response = await openai.createCompletion({
     model: "text-davinci-003",
@@ -34,4 +34,4 @@ chatRoute.post("/interviewChat", async(req, res)=>{
   res.send(response.data.choices[0].text)
 })
 
-module.exports = {chatRoute}
+module.exports = { chatRoute }
