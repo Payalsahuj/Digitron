@@ -1,9 +1,11 @@
-
+import { Navbar } from "../Component/Navbar"
+import {MdKeyboardDoubleArrowRight} from "react-icons/md"
 
 export const StudyMaterial = () => {
 
     return (
         <div>
+            <Navbar/>
             <h1 className="font-bold text-4xl text-center mb-9 fixed left-0 right-0 bg-gray-100 p-4 z-10">Study Material</h1>
             <div className="flex">
                 <div className="w-64 bg-gray-100 h-screen pt-10rem p-4 fixed mt-8 " >
@@ -19,37 +21,37 @@ export const StudyMaterial = () => {
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">HTML</h2>
                                 <p className="text-gray-300 text-justify">HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. </p>
-                                <a className="text-blue-500 underline float-right pt-2 px-2" onclick="myFunction()" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/HTML" >Read More</a>
+                                <a className="text-blue-500 underline pt-2 px-2" onclick="myFunction()" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/HTML" >Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">JavaScript</h2>
                                 <p className="text-gray-300 text-justify">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">CSS</h2>
                                 <p className="text-gray-300 text-justify">Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media. CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications.</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             {/* <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div> */}
 
                         </div>
@@ -61,37 +63,37 @@ export const StudyMaterial = () => {
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                <a  target="_blank"  href="">More</a>
+                                <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
+                             </div>
+                            <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
+                                <h2 className="text-2xl font-bold mb-2">Title</h2>
+                                <p className="text-gray-300 text-justify">description</p>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
-                            </div>
-                            <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
-                                <h2 className="text-2xl font-bold mb-2">Title</h2>
-                                <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
 
                         </div>
@@ -104,27 +106,27 @@ export const StudyMaterial = () => {
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                         </div>
                     </div>
@@ -135,27 +137,27 @@ export const StudyMaterial = () => {
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">Title</h2>
                                 <p className="text-gray-300 text-justify">description</p>
-                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More</a>
+                                 <a className="text-blue-500 underline float-right pt-2 px-2"  target="_blank"  href="">Read More <span><MdKeyboardDoubleArrowRight/></span> </a>
                             </div>
                         </div>
                     </div>
