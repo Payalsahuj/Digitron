@@ -8,17 +8,19 @@ import { StudyMaterial } from "../Pages/StudyMaterial";
 
 import QandA from "../Pages/QandA";
 import { DigitalInterview } from "../Pages/Digitalinterview";
+import { PrivateRoute } from "./Privateroute";
 
 export function Allroutes() {
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
+      <Route path="/" element={<Registration/>}/>
+      <Route path="/welcome" element={<Welcome />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/material" element={<StudyMaterial />} />
+      <Route path="/material" element={<PrivateRoute><StudyMaterial /></PrivateRoute>} />
       <Route path="/register" element={<Registration />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/qa" element={<QandA />}></Route>
-      <Route path="/interview" element={<DigitalInterview />} />
+      <Route path="/qa" element={<PrivateRoute><QandA /></PrivateRoute>}></Route>
+      <Route path="/interview" element={<PrivateRoute><DigitalInterview /></PrivateRoute>} />
     </Routes>
   );
 }

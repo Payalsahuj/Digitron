@@ -78,11 +78,11 @@ export function Login(){
                     isClosable: true,
 
                 })
-                localStorage.setItem("token",res.data.token)
+                localStorage.setItem("email",email)
                 
                 setemail("")
                 setpass("")
-                navigate("/")
+                navigate("/welcome")
                 
                 
             })
@@ -119,6 +119,10 @@ export function Login(){
                 })
 
         }
+    }
+
+    function handleskip(){
+        navigate("/dashboard")
     }
 
 
@@ -194,6 +198,19 @@ export function Login(){
                                                 bg: 'blue.500',
                                             }}>
                                             Login
+                                        </Button>
+                                      
+                                        <Button
+                                        width={{base:'100%',md:'50%'}}
+                                        margin={'auto'}
+                                           onClick={handleskip}
+                                            size="lg"
+                                            bg={'#263238'}
+                                            color={'white'}
+                                            _hover={{
+                                                bg: 'blue.500',
+                                            }} >
+                                            SKIP
                                         </Button>
                                     </Stack>
                                     <Stack pt={6}>
