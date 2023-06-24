@@ -10,13 +10,15 @@ import QandA from "../Pages/QandA";
 import { DigitalInterview } from "../Pages/Digitalinterview";
 
 export function Allroutes() {
-    return <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/material" element={<StudyMaterial />} />
-        <Route path="/register" element={<Registration />} />
+  return (
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/material" element={<StudyMaterial />} />
+      <Route path="/register" element={<Registration />} />
       <Route path="/login" element={<Login />} />
       <Route path="/qa" element={<QandA />}></Route>
-      <Route path="/interview" element={<DigitalInterview/>}/>
+      <Route path="/interview" element={<DigitalInterview />} />
     </Routes>
+  );
 }
