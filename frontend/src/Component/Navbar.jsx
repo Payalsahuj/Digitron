@@ -13,7 +13,7 @@ export function Navbar(){
         navigate("/dashboard")
     }
     return <div class="min-h-full">
-    <nav class="bg-gray-800">
+    <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
@@ -116,10 +116,10 @@ export function Navbar(){
 
 
 
-    <main>
+    {/* <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
        
       </div>
-    </main>
+    </main> */}
   </div>
 }
