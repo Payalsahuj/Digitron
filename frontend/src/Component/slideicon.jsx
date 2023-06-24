@@ -28,6 +28,9 @@ const IconDisplay = () => {
       }
     }, 1000);
 
+
+    
+
     return () => {
       clearInterval(interval);
     };
@@ -38,7 +41,7 @@ const IconDisplay = () => {
       {displayedData.map((item, index) => (
        <div data-aos="zoom-in" style={{margin:' 80% 5%',display:'flex',justifyContent:'center',textAlign:'center'}}>{item==="BsQuestionOctagonFill"?
         <BsQuestionOctagonFill size={'55%'} />:item==="TbBrandSpeedtest"?
-      <TbBrandSpeedtest size={'55%'}/>:item==="BsQuestionOctagonFill"?
+      <TbBrandSpeedtest size={'55%'}  />:item==="BsQuestionOctagonFill"?
     <BsQuestionOctagonFill size={'55%'}/>:item==="MdFeedback"?
   <MdFeedback size={'55%'}/>:<GrNotes size={'55%'}/>}
         </div>

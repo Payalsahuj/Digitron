@@ -11,7 +11,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 //=> Route for General chat bot
-chatRoute.post("/generalChat", async(req, res)=>{
+chatRoute.post("/generalChat", async (req, res) => {
   const message = req.body.msg
   const response = await openai.createCompletion({
     model: "text-davinci-003",
@@ -23,7 +23,7 @@ chatRoute.post("/generalChat", async(req, res)=>{
 })
 
 //=> Route for Interview chat bot
-chatRoute.post("/interviewChat", async(req, res)=>{
+chatRoute.post("/interviewChat", async (req, res) => {
   const message = req.body.msg
   const response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
@@ -45,15 +45,5 @@ chatRoute.post("/interviewChat", async(req, res)=>{
 })
 
 
-// chatRoute.post("/chatbot", async(req,res)=>{
-//   const message = req.body.msg
-//   const response = await openai.createChatCompletion({
-//     model: "gpt-3.5-turbo",
-//     messages: [{ role: "system", content: "Pretend like you are an interviewer name Jarvis and you are taking interview for the role of web developer, ask conceptual questions about react not about experience as if you are receiving answers from a interviewee." }, { role: "user", content: `${message}` }],
-//     max_tokens: 100,
-//     temperature:0.2,
-//   })
-//   res.send(response.data.choices[0].message.content)
-// })
+module.exports = { chatRoute }
 
-module.exports = {chatRoute}
