@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export default function QandA() {
   const [query, setQuery] = useState("");
   const [arr, setArr] = useState([]);
+
   const handlePush = () => {
     arr.push(query);
     setArr(arr);
@@ -61,9 +62,11 @@ export default function QandA() {
               <div>
                 <Card h={"250px"} p={"5"} border={"dashed grey 1px"}>
                   <CardBody
+                    pl={"2"}
                     w={"95%"}
                     border={"solid black"}
                     m={"auto"}
+                    textAlign={"left"}
                   ></CardBody>
                 </Card>
               </div>
