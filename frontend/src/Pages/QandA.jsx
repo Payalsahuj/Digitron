@@ -1,10 +1,22 @@
-import { Card, Input, Textarea } from "@chakra-ui/react";
+import { Card, CardBody, Input, Textarea } from "@chakra-ui/react";
 import { Navbar } from "../Component/Navbar";
 import logo from "../Image/1-removebg-preview.png";
+import { useEffect, useState } from "react";
 
-// const arr = ["aslam", "jignesh bhai", "krunal", "Yash", "payal", "shruti"];
+// const array = ["aslam", "jignesh bhai", "krunal", "Yash", "payal", "shruti"];
 
 export default function QandA() {
+  const [query, setQuery] = useState("");
+  const [arr, setArr] = useState([]);
+
+  const handlePush = () => {
+    arr.push(query);
+    setArr(arr);
+  };
+
+  useEffect(() => {
+    console.log("refresh");
+  }, [query]);
   return (
     <>
       <Navbar />
@@ -15,11 +27,11 @@ export default function QandA() {
               New Chat
             </button>
             <div className="flex-col" flexDirection={"column"}>
-              {/* {arr.reverse().map((chat) => {
+              {arr.map((chat) => {
                 return (
                   <div className="border-2 black text-xl mt-5 p-2">{chat}</div>
                 );
-              })} */}
+              })}
             </div>
           </div>
           <div className="w-10/12">
@@ -46,15 +58,28 @@ export default function QandA() {
             </div>
 
             <h1 className="text-2xl">Feel Free to ask me anything</h1>
-            <div className="border-2 border-black h-fit">
+            <div className="h-fit">
               <div>
-                <Card border={"solid black"}></Card>
+                <Card h={"250px"} p={"5"} border={"dashed grey 1px"}>
+                  <CardBody
+                    pl={"2"}
+                    w={"95%"}
+                    border={"solid black"}
+                    m={"auto"}
+                    textAlign={"left"}
+                  ></CardBody>
+                </Card>
               </div>
               <input
-                className="w-8/12 bg-gray-800 text-xl pt-3 pb-3 pl-5 text-slate-400 rounded-xl"
+                onChange={(e) => setQuery(e.target.value)}
+                value={query}
+                className="w-8/12 bg-gray-800 text-xl pt-3 pb-3 pl-5 text-slate-400 rounded-xl mt-2"
                 type="text"
               />
-              <button className="text-xl pt-3 pb-3 pl-6 pr-6 h-fit text-white bg-green-400 ml-3 rounded-xl">
+              <button
+                className="text-xl pt-3 bg-gray-800 pb-3 pl-6 pr-6 h-fit text-white ml-3 rounded-xl"
+                onClick={handlePush}
+              >
                 Send
               </button>
             </div>
@@ -63,7 +88,7 @@ export default function QandA() {
         <footer className="bg-gray-200 py-4">
           <div className="container mx-auto px-4 text-center">
             <p className="text-gray-600">
-              © {new Date().getFullYear()} Your Company. All rights reserved.
+              © {new Date().getFullYear()} Digitron. All rights reserved.
             </p>
           </div>
         </footer>
