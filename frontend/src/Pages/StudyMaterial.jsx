@@ -6,7 +6,7 @@ export const StudyMaterial = () => {
     return (
         <div>
             <Navbar/>
-            <h1 className="font-bold text-4xl text-center mb-9 fixed left-0 right-0 bg-gray-100 p-4 z-10">Study Material</h1>
+            <h1 className="font-bold text-4xl text-center mb-9 fixed left-0 right-0 mt-16 bg-gray-100 p-4 z-10">Study Material</h1>
             <div className="flex">
                 <div className="w-64 bg-gray-100 h-screen pt-10rem p-4 fixed mt-8 " >
                     <a href="#mern" className="block mt-8 font-bold text-2xl text-gray-700">MERN</a>
