@@ -20,7 +20,7 @@ export default function QandA() {
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: "-45px" }}>
+      <div style={{ marginTop: "-20px" }}>
         <main className="container mx-auto flex justify-between h-screen border-2 border-black mt-5">
           <div className="w-2/12 p-2" style={{ border: "solid black" }}>
             <button className="p-3 w-full bg-gray-800 text-white">
