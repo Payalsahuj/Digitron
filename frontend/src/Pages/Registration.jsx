@@ -1,13 +1,4 @@
-import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useDisclosure,
-  } from '@chakra-ui/react'
+
 
 import { Box, FormErrorMessage, FormHelperText, Image, Select, useToast } from "@chakra-ui/react";
 import cap from "../Image/1-removebg-preview.png"
@@ -36,7 +27,6 @@ import { POST_REGISTER_ERROR, POST_REGISTER_SUCCESS } from "../Redux/AuthReducer
 
 
 export function Registration() {
-    const { isOpen, onOpen, onClose } = useDisclosure()
   
     const [firstname, setfirstname] = useState("")
     const [isErrorname, setisErrorname] = useState(false)
@@ -246,27 +236,10 @@ export function Registration() {
                                             color={'white'}
                                             _hover={{
                                                 bg: 'blue.500',
-                                            }} onClick={onOpen}>
+                                            }} onClick={handleclick}>
                                             Sign up
                                         </Button>
                                     </Stack>
-                                    <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            sejfhdjfhhjdf
-          </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost' onClick={handleclick}>Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
                                     <Stack>
                                         <Text align={'center'}>
                                             Already a user? <Reactlink to="/login" ><span style={{ color: '#4299E1' }}>Login</span></Reactlink>
