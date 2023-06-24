@@ -42,12 +42,12 @@ export const StudyMaterial = () => {
                         </div>
                     </div>
                     <div className="p-4 z-50" id="mern">
-                       <a href="https://www.mongodb.com/mern-stack"> <h2 className="text-3xl font-bold mb-2">MERN SECTION</h2></a>
+                       <a target="_blank" href="https://www.mongodb.com/mern-stack"> <h2 className="text-3xl font-bold mb-2">MERN SECTION</h2></a>
                         <p className=" w-80 text-justify mx-auto">MERN stack is a collection of technologies that enables faster application development. It is used by developers worldwide. The main purpose of using MERN stack is to develop apps using JavaScript only. This is because the four technologies that make up the technology stack are all JS-based.</p>
                         <div className="mx-auto grid grid-cols-3 justify-between">
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
                                 <h2 className="text-2xl font-bold mb-2">MongoDB</h2>
-                                <p className="text-gray-300 text-justify">MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License (SSPL) which is deemed non-free by several distributions. MongoDB is a member of the MACH Alliance.</p>
+                                <p className="text-gray-300 text-justify">MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDb uses JSON-like documents with optional schemas and is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions. MongoDB is a member of the MACH Alliance.</p>
                                 <a className="text-blue-500 underline float-right pt-2 px-2 flex"  target="_blank"  href="https://www.w3schools.com/mongodb/">Read More <span className="my-1.5"><MdKeyboardDoubleArrowRight/></span> </a>
                              </div>
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
@@ -85,7 +85,7 @@ export const StudyMaterial = () => {
                     </div>
 
                     <div className="p-4" id="java">
-                        <a href="https://www.scientecheasy.com/2018/05/core-java-syllabus.html/"><h2 className="text-3xl font-bold mb-2">JAVA SECTION</h2></a>
+                        <a target="_blank" href="https://www.scientecheasy.com/2018/05/core-java-syllabus.html/"><h2 className="text-3xl font-bold mb-2">JAVA SECTION</h2></a>
                         <p className=" w-80 text-justify mx-auto">Java is a most popular, object-oriented, widely used programming language and platform that is utilized for Android development, web development, artificial intelligence, cloud applications, and much more. So, mastering this gives you great opportunities in bigger organizations.</p>
                         <div className="mx-auto grid grid-cols-3 justify-between">
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
@@ -121,7 +121,7 @@ export const StudyMaterial = () => {
                         </div>
                     </div>
                     <div className="p-4" id="node">
-                        <a href="https://nodejs.dev/en/learn/"><h2 className="text-3xl font-bold mb-2">NODE SECTION</h2></a>
+                        <a target="_blank" href="https://nodejs.dev/en/learn/"><h2 className="text-3xl font-bold mb-2">NODE SECTION</h2></a>
                         <p className=" w-80 text-justify mx-auto">Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.</p>
                         <div className="mx-auto grid grid-cols-3 justify-between">
                             <div className="mx-10 my-4 p-3 w-96 rounded-3xl shadow-xl bg-gray-800 text-gray-100">
