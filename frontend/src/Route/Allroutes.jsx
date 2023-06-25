@@ -9,6 +9,7 @@ import { StudyMaterial } from "../Pages/StudyMaterial";
 import QandA from "../Pages/QandA";
 import { DigitalInterview } from "../Pages/Digitalinterview";
 import { PrivateRoute } from "./Privateroute";
+import { Progress } from "../Pages/progress";
 
 export function Allroutes() {
   return (
@@ -20,6 +21,7 @@ export function Allroutes() {
       <Route path="/register" element={<Registration />} />
       <Route path="/login" element={<Login />} />
       <Route path="/qa" element={<PrivateRoute><QandA /></PrivateRoute>}></Route>
+      <Route path="/progress" element={<PrivateRoute><Progress/></PrivateRoute>}/>
       <Route path="/interview" element={<PrivateRoute><DigitalInterview /></PrivateRoute>} />
     </Routes>
   );
