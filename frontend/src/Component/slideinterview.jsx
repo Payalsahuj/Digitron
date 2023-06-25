@@ -44,10 +44,10 @@ const Interviewslide = () => {
       {displayedData?.map((item, index) => (
        <div data-aos="fade-down"
        data-aos-easing="linear"
-       key={item} style={{margin:' 7% 7%',display:'flex',textAlign:'left',fontFamily:'serif'}}>
-        <p data-aos="fade-down"
+       key={item} style={{margin:' 7% 7%',display:'flex',textAlign:'left'}}>
+        <p data-aos="zoom-in"
      data-aos-easing="linear"
-     data-aos-duration="1500"><b>{item}</b></p>
+     data-aos-duration="500">{item}</p>
         </div>
       ))}
     </div>
