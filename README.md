@@ -3,7 +3,7 @@
 <img width="30%" src="https://github.com/Payalsahuj/Digitron/assets/119413894/2a379daf-dec5-4a78-9743-71184ee982c4"><br><br>
 
 <h2 align="center">Description </h2>
-<h3>Digitron provides you a platform where you can select your tech stack and give interview one on one interviews with our AI. Our platform also provides you a Q and A section where you can ask any general queries to our AI and also a Study material section where you can read about different tech stacks.
+<h3>Digitron provides you a platform where you can select your tech stack and give one on one interviews with our AI. Our platform also provides you a Q and A section where you can ask any general queries to our AI and also a Study material section where you can read about different tech stacks.
 </h3>
 </div>  
   
