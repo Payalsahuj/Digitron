@@ -29,7 +29,7 @@
    >    - GitHub: https://github.com/Jignesh6775
 
 
-5. Krunal Gurao (Backend)
+5. Krunal Arun Kumar Gurao (Backend)
    >    - e-Mail: krunalgurao1@gmail.com
    >    - GitHub: https://github.com/KrunalGurao
 
