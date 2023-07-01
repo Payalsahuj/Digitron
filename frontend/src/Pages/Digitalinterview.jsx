@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Navbar } from "../Component/Navbar";
 import Interviewslide from "../Component/slideinterview";
 import {MdOutlineMicExternalOn} from "react-icons/md"
+import { Spinner } from '@chakra-ui/react'
 import axios from "axios";
 import {
   Modal,
@@ -21,6 +22,7 @@ export function DigitalInterview() {
   const [disableinput,setdisableinput]=useState(false)
   const [startmsg,setstartmsg]=useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
+ 
   const navigate=useNavigate()
   const toast=useToast()
   const inputref = useRef()
@@ -59,7 +61,7 @@ export function DigitalInterview() {
     .then((res)=>{
       console.log(res)
       updateQandA(ai, res.data)
-     
+      inputref.current.value=""
     })
     .catch((err)=>{
       console.log(err)
@@ -73,6 +75,7 @@ export function DigitalInterview() {
         return el;
       });
     }
+    inputref.current.value=""
     return <p>{value}</p>;
   };
 
@@ -99,7 +102,7 @@ export function DigitalInterview() {
                 </div>
             </div>
             <div style={{ height: '83%', width: '83%', borderRadius: '10px 0px 0px 0px', backgroundColor: 'black', position: 'absolute', bottom: '0', right: '0', overflow: 'scroll', overflowX: 'auto' ,color:'white',textAlign:'left',padding:'4% 5%'}}>
-            <p style={{marginBottom:'25px',fontSize:'20px'}}>{startmsg}</p>
+            <p style={{marginBottom:'25px',fontSize:'20px',display:disableinput?'flex':'none'}}>{startmsg?startmsg:<Spinner color='red.500' />}</p>
            <div style={{marginBottom:'7%'}}>{
               qna.map((el)=>{
                 if(el.from == you){
