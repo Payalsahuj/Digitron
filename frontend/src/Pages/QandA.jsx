@@ -25,7 +25,7 @@ export default function QandA() {
     console.log(msg);
     setLoading(true);
     axios
-      .post("https://hackathon-o2kz.onrender.com/chat/generalChat", {
+      .post("https://digitron-backend.onrender.com/chat/generalChat", {
         msg,
       })
       .then((res) => {
