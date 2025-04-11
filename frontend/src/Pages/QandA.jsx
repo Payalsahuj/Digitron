@@ -25,7 +25,7 @@ export default function QandA() {
     console.log(msg);
     setLoading(true);
     axios
-      .post("https://digitron-backend.onrender.com/chat/generalChat", {
+      .post("https://digitron.onrender.com/chat/generalChat", {
         msg,
       })
       .then((res) => {
@@ -45,9 +45,7 @@ export default function QandA() {
     return <p>{value}</p>;
   };
 
-  useEffect(() => {
-    console.log("refresh");
-  }, []);
+ 
   return (
     <>
       <Navbar />
