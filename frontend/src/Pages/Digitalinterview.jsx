@@ -36,7 +36,7 @@ export function DigitalInterview() {
     const obj={
       msg:"Hi"
     }
-    axios.post("https://digitron-backend.onrender.com/chat/interviewChat",obj).then((res)=>{
+    axios.post("https://digitron.onrender.com/chat/interviewChat",obj).then((res)=>{
       setstartmsg(res.data)
     })
     .catch((err)=>{
@@ -57,7 +57,7 @@ export function DigitalInterview() {
       msg
     }
     updateQandA(you, msg)
-    axios.post("https://digitron-backend.onrender.com/chat/interviewChat",obj)
+    axios.post("https://digitron.onrender.com/chat/interviewChat",obj)
     .then((res)=>{
       console.log(res)
       updateQandA(ai, res.data)
