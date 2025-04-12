@@ -6,7 +6,7 @@ export const register =(data)=> (dispatch) => {
     
   dispatch({type:POST_REGISTER_REQUEST})
 
-  return axios.post("https://digitron.onrender.com/users/register",data)
+  return axios.post("https://digitron.onrender.com/user/register",data)
   
 };
 
@@ -15,6 +15,6 @@ export const login=(data)=>(dispatch)=>{
     
   dispatch({type:POST_REGISTER_REQUEST})
 
-  return axios.post("https://digitron.onrender.com/users/login",data)
+  return axios.post("https://digitron.onrender.com/user/login",data)
 }
 
